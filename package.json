@@ -1,8 +1,8 @@
 {
-  "name": "node12-template-action",
-  "version": "0.0.0",
+  "name": "glo-action-move-card",
+  "version": "1.0.0",
   "private": true,
-  "description": "Node 12 template action",
+  "description": "GitHub action to move cards to a column",
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
@@ -12,21 +12,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/start-vm-action.git"
+    "url": "git+https://github.com/Axosoft/glo-action-move-card.git"
   },
   "keywords": [
     "actions",
-    "node",
-    "setup"
+    "glo"
   ],
-  "author": "GitHub",
+  "author": "Axosoft",
   "license": "MIT",
   "dependencies": {
     "@actions/core": "file:toolkit/actions-core-0.0.0.tgz",
-    "@actions/io": "file:toolkit/actions-io-0.0.0.tgz",
     "@actions/exec": "file:toolkit/actions-exec-0.0.0.tgz",
     "@actions/github": "file:toolkit/actions-github-0.0.0.tgz",
+    "@actions/io": "file:toolkit/actions-io-0.0.0.tgz",
     "@actions/tool-cache": "file:toolkit/actions-tool-cache-0.0.0.tgz",
+    "@axosoft/glo-sdk": "^1.0.7",
     "semver": "^6.1.1"
   },
   "devDependencies": {
@@ -39,12 +39,5 @@
     "prettier": "^1.17.1",
     "ts-jest": "^24.0.2",
     "typescript": "^3.5.1"
-  },
-  "husky": {
-    "skipCI": true,
-    "hooks": {
-      "pre-commit": "npm run build && npm run format",
-      "post-commit": "npm prune --production && git add node_modules/* && git commit -m \"Husky commit correct node modules\""
-    }
   }
 }
