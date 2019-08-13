@@ -1,4 +1,4 @@
-name: 'Glo Move Cards'
+name: 'Glo Boards Move Cards'
 description: 'GitHub action to move Glo Boards cards to a column'
 branding:
   color: 'blue'
